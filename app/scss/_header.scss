@@ -1,0 +1,107 @@
+.header {
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  &.open {
+    .overlay {
+      display: block;
+    }
+    #hamburgerbtn {
+      background-image: url("/images/icon-close.svg");
+    }
+  }
+  .overlay {
+    opacity: 0;
+    position: fixed;
+    top: 5.125rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: $vdkviolet;
+  }
+  &__logo {
+    img {
+      width: 7.125rem;
+      height: 1.25rem;
+    }
+  }
+  #hamburgerbtn {
+    width: 2.125rem;
+    height: 2.125rem;
+    background-image: url("/images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__links {
+    a {
+      &:not(:last-child) {
+        letter-spacing: 0.15625rem;
+        text-transform: uppercase;
+        color: $grayishblue;
+        margin-right: 1.5rem;
+        transition: color 300ms ease-in-out;
+        font-weight: 700;
+        &:hover {
+          color: $dkviolet;
+        }
+      }
+    }
+  }
+  &__menu {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    a {
+      text-transform: uppercase;
+      width: calc(100% - 3rem);
+      margin: 0 auto;
+      margin-top: 3.125rem;
+      display: inline-block;
+      color: $vltgray;
+      font-weight: 700;
+      &:last-child {
+        margin-top: 36px;
+      }
+    }
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 300ms ease-in-out forwards;
+}

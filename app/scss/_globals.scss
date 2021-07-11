@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color: $dkgrayishviolet;
+    &.noscroll {
+      overflow: hidden;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'DM Serif Display', serif;
+    margin-top: 0;
+    font-weight: 400;
+}
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  &--pall {
+    padding: 1.5rem;
+    @include breakpoint-up(large) {
+      padding: 1.875rem 1.5rem;
+    }
+  }
+}
+.button {
+  padding: 14px 26px;
+  border: 2px solid $dkviolet;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $dkviolet;
+  letter-spacing: 0.15625rem;
+  transition: background-color 300ms ease-in-out,
+              color 300ms ease-in-out;
+  &-light {
+    border-color: $vltgray;
+    color: $vltgray
+  }
+  &:hover {
+    color: $vltgray;
+    background-color: $dkviolet
+  }
+}
+.flex {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+      display: none;
+    }
+  }
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+      display: none;
+    }
+  }
+  
