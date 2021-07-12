@@ -274,7 +274,6 @@ a:visited {
     background-image: url("/images/desktop/image-intro-desktop.jpg");
     background-position: center;
     background-size: cover;
-    z-index: 1;
   }
 }
 
@@ -557,14 +556,37 @@ a:visited {
 }
 
 .footer {
+  position: relative;
   margin-top: 9.0625rem;
   background-color: #fafafa;
 }
 
+.footer::before {
+  content: "";
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/images/mobile/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+@media (min-width: 64em) {
+  .footer::before {
+    height: 50%;
+    width: 33.125rem;
+    background-image: url("/images/desktop/bg-pattern-footer-desktop.svg");
+  }
+}
+
 .footer__content {
+  position: relative;
   padding-top: 5.5rem;
   padding-bottom: 4.125rem;
   text-align: center;
+  z-index: 1;
 }
 
 @media (min-width: 64em) {

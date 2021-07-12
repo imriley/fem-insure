@@ -1,10 +1,29 @@
 .footer {
+  position: relative;
   margin-top: 9.0625rem;
   background-color: $vltgray;
+  &::before {
+    content: "";
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("/images/mobile/bg-pattern-footer-mobile.svg");
+    background-repeat: no-repeat;
+    z-index: 0;
+    @include breakpoint-up(large) {
+      height: 50%;
+      width: 33.125rem;
+      background-image: url("/images/desktop/bg-pattern-footer-desktop.svg");
+    }
+  }
   &__content {
+    position: relative;
     padding-top: 5.5rem;
     padding-bottom: 4.125rem;
     text-align: center;
+    z-index: 1;
     @include breakpoint-up(large) {
       padding-bottom: 0px;
     }
