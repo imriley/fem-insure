@@ -38,10 +38,11 @@
       &:not(:last-child) {
         letter-spacing: 0.15625rem;
         text-transform: uppercase;
-        color: $grayishblue;
+        color: $dkgrayishviolet;
         margin-right: 1.5rem;
         transition: color 300ms ease-in-out;
         font-weight: 700;
+        font-size: 0.875rem;
         &:hover {
           color: $dkviolet;
         }

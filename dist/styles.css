@@ -55,6 +55,7 @@ a:visited {
   padding: 14px 26px;
   border: 2px solid #2d2640;
   text-transform: uppercase;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #2d2640;
   letter-spacing: 0.15625rem;
@@ -130,10 +131,11 @@ a:visited {
 .header__links a:not(:last-child) {
   letter-spacing: 0.15625rem;
   text-transform: uppercase;
-  color: #95a9c6;
+  color: #837d87;
   margin-right: 1.5rem;
   transition: color 300ms ease-in-out;
   font-weight: 700;
+  font-size: 0.875rem;
 }
 
 .header__links a:not(:last-child):hover {
@@ -300,7 +302,7 @@ a:visited {
 
 @media (min-width: 64em) {
   .hero__text h1 {
-    font-size: 3.125rem;
+    font-size: 4rem;
   }
 }
 
@@ -361,6 +363,7 @@ a:visited {
   color: #fafafa;
   border: 0.125rem solid #fafafa;
   padding: 0.9375rem 1.5rem;
+  font-size: 0.875rem;
   display: inline-block;
   letter-spacing: 0.125rem;
   font-weight: 700;
@@ -432,7 +435,7 @@ a:visited {
 
 .feature__title {
   margin-bottom: 2.125rem;
-  color: #2d2640;
+  color: #2b272f;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -541,6 +544,7 @@ a:visited {
   display: inline-block;
   letter-spacing: 2px;
   font-weight: 700;
+  font-size: 0.875rem;
   transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 
@@ -652,7 +656,7 @@ a:visited {
 
 .footer__item h3 {
   margin-bottom: 2.625rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #837d87;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -663,6 +667,7 @@ a:visited {
 .footer__item a {
   margin-bottom: 1.375rem;
   color: #2b272f;
+  font-size: 0.875rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
